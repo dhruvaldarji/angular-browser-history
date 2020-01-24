@@ -1,0 +1,17 @@
+<h3>History</h3>
+<button (click)="clearHistory()">Clear History</button>
+<p>Interactive History List</p>
+<hr/>
+<ul>
+  <li *ngFor="let item of history$ | async">
+    <a
+      class="route route__prev"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="[item.url]"
+    >
+      Route: "{{ item.url}}" @ {{ item.date | date:'medium'}}
+    </a>
+  </li>
+</ul>
+<hr/>

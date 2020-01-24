@@ -1,0 +1,92 @@
+/* Add application styles & imports to this file! */
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+a, button {
+  color: #696969;
+  text-decoration: none;
+  display: inline-block;
+  background: transparent;
+  background-clip: border-box;
+  line-height: 3rem;
+  white-space: normal;
+  user-select: none;
+  font-weight: normal;
+  min-width: 10rem;
+  border-radius: 2rem;
+  text-align: center;
+  vertical-align: middle;
+  transition: border 0.15s linear;
+  padding: 0 1rem;
+
+  &:focus {
+    color: #696969;
+    text-decoration: none;
+    border: 0.1rem solid #1276ce;
+  }
+
+  &:hover,
+  &:active {
+    color: #696969;
+    text-decoration: none;
+  }
+
+  &[disabled] {
+    color: #b1b1b1;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &:focus {
+      border: 0.1rem solid transparent;
+    }
+  }
+
+  border: 0.1rem solid #d7d7d7;
+  background: #ffffff;
+
+  &[disabled]:focus {
+    border: 0.1rem solid #d7d7d7;
+  }
+
+  & + a, & + button {
+    margin-left: 0.5rem;
+  }
+
+  &.active {
+    color: #ffffff;
+    font-weight: bold;
+    background: #1276ce;
+    border: 0.1rem solid #1276ce;
+
+    &:focus {
+      color: #ffffff;
+      text-decoration: none;
+      border: 0.1rem solid transparent;
+      box-shadow: 0 0 0 0.2rem lighten(#1276ce, 20%);
+    }
+
+    &:hover,
+    &:active {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    &[disabled] {
+      color: transparentize(#ffffff, 0.5);
+      border: 0.1rem solid transparent;
+      background-color: #85b7e3;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

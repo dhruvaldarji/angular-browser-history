@@ -1,0 +1,30 @@
+<ng-container *ngIf="routes$ | async as routes">
+  <div class="route__list">
+    <a
+      class="route route__prev"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="['/']"
+    >
+      Home
+    </a>
+    <a
+      class="route route__prev"
+      [routerLink]="['/' + (routes.previous || '')]"
+    >
+      Previous
+    </a>
+    <a
+      class="route route__cur"
+      [routerLink]="['.']"
+    >
+      Current: {{ routes.current }}
+    </a>
+    <a
+      class="route route__next"
+      [routerLink]="['/', routes.next]"
+    >
+      Next
+    </a>
+  </div>
+</ng-container>
