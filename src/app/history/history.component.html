@@ -2,15 +2,26 @@
 <button (click)="clearHistory()">Clear History</button>
 <p>Interactive History List</p>
 <hr/>
-<ul>
-  <li *ngFor="let item of history$ | async">
+<ul class="route__list">
+  <li class="route" *ngFor="let item of history$ | async">
     <a
-      class="route route__prev"
+      class="route__item"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
       [routerLink]="[item.url]"
     >
-      Route: "{{ item.url}}" @ {{ item.date | date:'medium'}}
+      <span class="route__icon">
+        <fa-icon *ngIf="item.icon" [icon]="['fas', item.icon]"
+      ></fa-icon>
+      </span>
+      <div class="route__text">
+        <span class="route__text--title">
+          {{ item.text }}
+        </span>
+        <i class="route__text--description">
+          {{ item.description | date:'medium'}}
+        </i>
+      </div>
     </a>
   </li>
 </ul>

@@ -1,0 +1,40 @@
+.route {
+  padding: 0.5rem 0;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: initial;
+    line-height: 1.5rem;
+  }
+
+  &__icon {
+    text-align: center;
+    padding: 0.5rem;
+    width: 2rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    &--title {
+      margin-bottom: 0.2rem;
+    }
+
+    &--description {
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+}
