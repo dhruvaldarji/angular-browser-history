@@ -51,7 +51,7 @@ export class HistoryService {
   }
 
   private getIconFromUrl(url: string): string {
-    return !url || url === "/" ? "home" : `file`;
+    return !url || url === "/" ? "home" : "file";
   }
 
   private getStorageHistory(): IRouteHistory[] {
